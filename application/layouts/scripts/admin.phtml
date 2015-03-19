@@ -1,0 +1,123 @@
+<?= $this->doctype('XHTML1_TRANSITIONAL') ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+     <base href="http://<?= $_SERVER['HTTP_HOST'] . $this->baseUrl() ?>/" />
+     <?php
+        $this->headLink()->prependStylesheet('css/foundation.css');
+        $this->headLink()->appendStylesheet('css/estilo-admin.css');
+        $this->headLink()->appendStylesheet('responsive-tables.css');
+        $this->headScript()->prependFile('js/jquery-1.10.2.min.js');
+        $this->headScript()->appendFile('js/jquery-ui-1.10.3.custom.min.js');
+        $this->headScript()->appendFile('js/vendor/modernizr.js');
+        $this->headScript()->appendFile('responsive-tables.css');
+        echo $this->headLink() . "\n";
+        echo $this->headScript() . "\n";
+      ?>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Pescado | Principal</title>
+  </head>
+  <body>
+     <div class="fixed">  
+     <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+           
+          <li class="name">
+            <h1>
+              <a class="meu-pescado" href="#">
+                Meu Pescado
+              </a>
+            </h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+     
+        <section class="top-bar-section">
+           
+          <ul class="left">
+            <li class="divider"></li>
+            <li class="has-dropdown">
+ 
+           
+          </ul>
+            <ul class="right">
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                    <a>Variáveis</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Cidades</a></li>
+                        <li><a href="#">Portos</a></li>
+                        <li><a href="#">Comunidades</a></li>
+                        <li><a href="#">Colônias</a></li>
+                        <li><a href="#">Pesqueiros</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">Outros →</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Cidades</a></li>
+                                    <li><a href="#">Portos</a></li>
+                                    <li><a href="#">Comunidades</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">Dados das Entrevistas</a></li>
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                    <a href="#">Dados da Filogenia</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li><a href="#">See all →</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+     </nav>
+     </div>  
+      
+            <div class="large-3 medium-4 columns">
+                <div class="hide-for-small">
+                    <h1><a href="<?= $this->url(array("controller" => "index", "action" => "index"), null, true) ?>"><img class="logo" src="img/meu_pescado.jpg"/></a></h1>
+
+
+                  <ul class="side-nav">
+                    <li><a href="<?= $this->url(array("controller" => "arte-pesca", "action" => "index"), null, true) ?>">Artes de Pesca</a></li>
+                    <li><a href="#">Embarcações</a></li>
+                    <li><a href="#">Entrevistas</a></li>
+                    <li><a href="#">Ficha Diária</a></li>
+                    <li><a href="#">Municípios</a></li>
+                    <li><a href="#">Portos</a></li>
+                    <li><a href="#">Territórios de Identidade</a></li>
+                    <li><a href="#">Usuários</a></li>
+                  </ul>
+
+                  <p><img class="logo" src="img/logo_bahia_vert.jpg"/></p>
+                  <p><img class="logo" src="img/bahia_pesca.jpg"/></p>
+                </div>
+            </div>
+
+          <div class="row"> 
+              <div id="conteudo">
+                    <?php echo $this->layout()->content; ?>
+                </div>
+          </div>
+          <footer class="row" id="rodape">
+            <div class="large-14 columns">
+              <hr/>
+              <div class="row">
+                <div class="large-6 columns">
+                  <p>© Todos os direitos reservados</p>
+                </div>
+                <div class="large-6 columns">
+                  <ul class="inline-list right">
+                    <li><a href="#">Bahia Pesca</a></li>
+                    <li><a href="#">Governo do Estado da Bahia</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div> 
+          </footer>
+    </body>
+</html>

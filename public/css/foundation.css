@@ -123,9 +123,8 @@ select {
   margin-right: auto;
   margin-top: 50px;
   margin-bottom: 0;
-  max-width: 62.5rem; }
+  max-width: 70.5rem; }
   .row:before, .row:after {
-    content: " ";
     display: table; }
   .row:after {
     clear: both; }
